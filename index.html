@@ -21,16 +21,11 @@
   <aside class="sidebar">
 
     <div class="logo-area">
-      <div class="logo-box">E</div>
-
-      <div>
-        <h2>ECZU</h2>
-        <p>GRAPHICS</p>
-      </div>
+      <img src="EczuGraphics.png" alt="ECZU Logo" class="main-logo">
     </div>
 
     <nav>
-      <a href="#home" class="active">
+      <a href="#home">
         <i class="fa-solid fa-house"></i>
         Home
       </a>
@@ -145,24 +140,7 @@
 
         </div>
 
-        <div class="hero-stats">
-
-          <div>
-            <strong>50+</strong>
-            <span>Projects</span>
-          </div>
-
-          <div>
-            <strong>30+</strong>
-            <span>Clients</span>
-          </div>
-
-          <div>
-            <strong>100%</strong>
-            <span>Passion</span>
-          </div>
-
-        </div>
+        
 
       </div>
 
@@ -268,10 +246,7 @@
             esports groups and organizations.
           </p>
 
-          <a href="#">
-            Learn More
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          
 
         </div>
 
@@ -289,10 +264,7 @@
             around your brand identity.
           </p>
 
-          <a href="#">
-            Learn More
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          
 
         </div>
 
@@ -310,10 +282,7 @@
             graphics for your social pages.
           </p>
 
-          <a href="#">
-            Learn More
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          
 
         </div>
 
@@ -331,10 +300,7 @@
             standings and gaming graphics.
           </p>
 
-          <a href="#">
-            Learn More
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          
 
         </div>
 
@@ -442,12 +408,12 @@
         <div class="skill">
 
           <div class="skill-name">
-            <span>Photopea</span>
-            <span>95%</span>
+            <span>Adobe Illustrator</span>
+            <span>90%</span>
           </div>
 
           <div class="bar">
-            <div style="width:95%"></div>
+            <div style="width:90%"></div>
           </div>
 
         </div>
@@ -457,11 +423,11 @@
 
           <div class="skill-name">
             <span>Logo Design</span>
-            <span>85%</span>
+            <span>95%</span>
           </div>
 
           <div class="bar">
-            <div style="width:85%"></div>
+            <div style="width:95%"></div>
           </div>
 
         </div>
@@ -555,6 +521,19 @@
 
 
   <script src="script.js"></script>
+<script>
+const navLinks = document.querySelectorAll("nav a");
 
+navLinks.forEach(link => {
+    link.addEventListener("click", function() {
+
+        navLinks.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        this.classList.add("active");
+    });
+});
+</script>
 </body>
 </html>
