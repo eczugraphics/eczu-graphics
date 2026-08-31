@@ -21,33 +21,41 @@ body {
    SIDEBAR
 ========================= */
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
 
-  width: 250px;
-  height: 100vh;
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-  padding: 30px 22px;
+    width: 100%;
+    height: 80px;
 
-  background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  border-right: 1px solid #1c1c1c;
+    padding: 0 40px;
 
-  display: flex;
-  flex-direction: column;
+    background: #111;
+    border-bottom: 1px solid #333;
 
-  z-index: 100;
+    z-index: 1000;
 }
+
 
 
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 12px;
-
+  justify-content: center;
+  margin: 0;
   margin-bottom: 45px;
+}
+.main-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
 }
 
 
@@ -1344,4 +1352,188 @@ body {
     100% {
         background-position: 0% 0%;
     }
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+}
+
+.sidebar nav a {
+    margin: 0;
+}
+
+/* FREELANCE PROJECTS - KAHANAY NG TOP MENU */
+
+.freelance-card {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 10px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: transparent;
+    border: none;
+    border-left: 1px solid #333;
+    border-radius: 0;
+}
+
+.freelance-card p {
+    margin: 0;
+    font-size: 11px;
+}
+
+.freelance-card h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.freelance-card .hire-btn {
+    width: auto;
+    padding: 10px 18px;
+}
+/* FREELANCE PROJECTS SA TOP BAR */
+
+.hire-card {
+    position: static;
+    width: auto;
+    margin: 0;
+    padding: 10px 20px;
+
+    background: transparent;
+    border: none;
+    border-left: 1px solid #333;
+    border-radius: 0;
+}
+
+/* COMPACT FREELANCE CARD SA TOP BAR */
+
+.sidebar .hire-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: auto;
+    min-width: 0;
+
+    padding: 6px 12px;
+    margin: 0;
+
+    background: transparent;
+    border: none;
+    border-left: 1px solid #333;
+}
+
+.sidebar .hire-card p,
+.sidebar .hire-card span {
+    display: none;
+}
+
+.sidebar .hire-card h3 {
+    margin: 0;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.sidebar .hire-card h3 br {
+    display: none;
+}
+
+.sidebar .hire-card .hire-btn {
+    width: auto;
+    padding: 8px 14px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* LOGO SA TOP NAVIGATION */
+
+.logo-area {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+/* FINAL LOGO FIX */
+
+.logo-area {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 70px;
+    height: 70px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0;
+}
+
+.logo-area .main-logo {
+    width: 70px !important;
+    height: 70px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+.logo-box {
+    display: none !important;
+}
+
+/* SOCIAL MEDIA SA TOP NAVIGATION */
+
+.socials {
+    margin: 0 !important;
+    padding: 0 0 0 20px !important;
+    border-left: 1px solid #333;
+
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.socials p {
+    margin: 0 !important;
+    font-size: 10px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 18px;
+}
+
+/* SERVICE CARDS - NO WHITE HOVER */
+
+.service-card,
+.service-card:hover {
+    background: transparent !important;
+    color: white !important;
+    transform: none !important;
+}
+
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover i {
+    color: inherit !important;
 }
