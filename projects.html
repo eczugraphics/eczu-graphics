@@ -8,208 +8,528 @@
     <title>All Projects | ECZU Graphics</title>
 
     <link rel="stylesheet" href="Style.css">
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 </head>
 
 <body>
 
-    <section class="all-projects">
+    <!-- NAVIGATION -->
+    <aside class="sidebar">
 
-        <div class="projects-header">
-            <a href="index.html" class="back-btn">← Back to Home</a>
+        <div class="logo-area">
+            <img
+                src="EczuGraphics.png"
+                alt="ECZU Logo"
+                class="main-logo"
+            >
+        </div>
 
-            <p>MY PORTFOLIO</p>
-            <h1>All Projects</h1>
+        <nav>
 
-            <p class="projects-description">
-                A collection of my graphic design works.
-            </p>
-            <div class="filter-buttons">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
 
-    <button class="filter-btn active" data-filter="all">
-        ALL
-    </button>
+            <a href="about.html">
+                <i class="fa-regular fa-user"></i>
+                About
+            </a>
 
-    <button class="filter-btn" data-filter="jersey">
-        JERSEY
-    </button>
+            <a href="services.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Services
+            </a>
 
-    <button class="filter-btn" data-filter="logo">
-        LOGO
-    </button>
+            <a href="projects.html" class="active">
+                <i class="fa-regular fa-folder"></i>
+                Portfolio
+            </a>
 
-    <button class="filter-btn" data-filter="poster">
-        POSTER
-    </button>
+            <a href="skills.html">
+                <i class="fa-solid fa-code"></i>
+                Skills
+            </a>
 
-    <button class="filter-btn" data-filter="social">
-        SOCIAL MEDIA
-    </button>
+            <a href="contact.html">
+                <i class="fa-regular fa-envelope"></i>
+                Contact
+            </a>
 
-</div>
+        </nav>
+
+
+        <!-- FREELANCE -->
+        <div class="hire-card">
+
+            <p>Available for</p>
+
+            <h3>
+                Freelance<br>
+                Projects
+            </h3>
+
+            <span>
+                Need a graphic designer?
+                Let's create something clean.
+            </span>
+
+            <a href="contact.html" class="hire-btn">
+                Hire Me
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
         </div>
 
 
-        <div class="all-projects-grid">
+        <!-- SOCIALS -->
+        <div class="socials">
 
-            <div class="gallery-card" data-category="jersey">
-                <img src="ARK Jersey Layout.png" alt="Jersey Design">
-                <p>JERSEY DESIGN</p>
-                <h3>Ascend Red Kings</h3>
-            </div>
+            <p>FOLLOW ME</p>
 
-            <div class="gallery-card" data-category="logo">
-                <img src="My Logo.jpg" alt="Logo Design">
-                <p>LOGO DESIGN</p>
-                <h3>Eczu Graphics</h3>
-            </div>
-            <div class="gallery-card" data-category="logo">
-                <img src="Templars.jpg" alt="Logo Design">
-                <p>LOGO DESIGN</p>
-                <h3>Ancient Templars</h3>
-            </div>
+            <div>
 
-            <div class="gallery-card" data-category="logo">
-                <img src="Stallions.jpg" alt="Logo Design">
-                <p>LOGO DESIGN</p>
-                <h3>Ancient Stallions</h3>
-            </div>
-            <div class="gallery-card" data-category="social">
-                <img src="images/poster.jpg" alt="Tournament Poster">
-                <p>SOCIAL MEDIA</p>
-                <h3>Tournament Poster</h3>
-            </div>
+                <a
+                    href="https://www.facebook.com/share/1GeFxTS1bp/"
+                    target="_blank"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
 
-            <div class="gallery-card" data-category="social">
-                <img src="images/team-standing.jpg" alt="Team Standing">
-                <p>GRAPHIC DESIGN</p>
-                <h3>Team Standing</h3>
+                <a
+                    href="https://www.instagram.com/yezu.mitzu?igsi=MTQzZnFwMWlzMWsycQ=="
+                    target="_blank"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/@eczu_graphics?_r=1&_t=ZS-99KpbpIRoJA"
+                    target="_blank"
+                    aria-label="TikTok"
+                >
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
             </div>
 
         </div>
 
-    </section>
-<!-- IMAGE POPUP -->
-<div id="imageModal" class="image-modal">
+    </aside>
 
-    <span class="close-modal">&times;</span>
 
-    <button class="modal-prev">&#10094;</button>
+    <!-- ALL PROJECTS -->
+    <main class="main">
 
-    <img id="modalImage" src="" alt="Design Preview">
+        <section class="all-projects">
 
-    <button class="modal-next">&#10095;</button>
+            <div class="projects-header">
 
-</div>
+                <p>MY PORTFOLIO</p>
 
-<script>
-    const modal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
-    const closeModal = document.querySelector(".close-modal");
+                <h1>All Projects</h1>
 
-    const prevBtn = document.querySelector(".modal-prev");
-    const nextBtn = document.querySelector(".modal-next");
+                <p class="projects-description">
+                    A collection of my graphic design works.
+                </p>
 
-    const images = document.querySelectorAll(".gallery-card img");
 
-    let currentIndex = 0;
+                <!-- FILTER BUTTONS -->
+                <div class="filter-buttons">
 
-    // OPEN IMAGE
-    images.forEach((image, index) => {
+                    <button
+                        class="filter-btn active"
+                        data-filter="all"
+                    >
+                        ALL
+                    </button>
 
-        image.addEventListener("click", function () {
+                    <button
+                        class="filter-btn"
+                        data-filter="jersey"
+                    >
+                        JERSEY
+                    </button>
 
-            currentIndex = index;
+                    <button
+                        class="filter-btn"
+                        data-filter="logo"
+                    >
+                        LOGO
+                    </button>
 
-            modalImage.src = this.src;
+                    <button
+                        class="filter-btn"
+                        data-filter="poster"
+                    >
+                        POSTER
+                    </button>
 
-            modal.classList.add("active");
+                    <button
+                        class="filter-btn"
+                        data-filter="social"
+                    >
+                        SOCIAL MEDIA
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT GRID -->
+            <div class="all-projects-grid">
+
+                <!-- JERSEY -->
+                <div
+                    class="gallery-card"
+                    data-category="jersey"
+                >
+
+                    <img
+                        src="ARK Jersey Layout.png"
+                        alt="Jersey Design"
+                    >
+
+                    <p>JERSEY DESIGN</p>
+
+                    <h3>Ascend Red Kings</h3>
+
+                </div>
+
+
+                <!-- POSTER -->
+                <div
+                    class="gallery-card"
+                    data-category="poster"
+                >
+
+                    <img
+                        src="VQ TEAM.png"
+                        alt="VELQORA Team Roster"
+                    >
+
+                    <p>TEAM ROSTER DESIGN</p>
+
+                    <h3>VELQORA</h3>
+
+                </div>
+
+
+                <!-- POSTER -->
+                <div
+                    class="gallery-card"
+                    data-category="poster"
+                >
+
+                    <img
+                        src="ARK TEAM.png"
+                        alt="Ascend Red Kings Team Roster"
+                    >
+
+                    <p>TEAM ROSTER DESIGN</p>
+
+                    <h3>ASCEND RED KINGS</h3>
+
+                </div>
+
+
+                <!-- LOGO -->
+                <div
+                    class="gallery-card"
+                    data-category="logo"
+                >
+
+                    <img
+                        src="My Logo.jpg"
+                        alt="ECZU Graphics Logo"
+                    >
+
+                    <p>LOGO DESIGN</p>
+
+                    <h3>Eczu Graphics</h3>
+
+                </div>
+
+
+                <!-- LOGO -->
+                <div
+                    class="gallery-card"
+                    data-category="logo"
+                >
+
+                    <img
+                        src="Templars.jpg"
+                        alt="Ancient Templars Logo"
+                    >
+
+                    <p>LOGO DESIGN</p>
+
+                    <h3>Ancient Templars</h3>
+
+                </div>
+
+
+                <!-- LOGO -->
+                <div
+                    class="gallery-card"
+                    data-category="logo"
+                >
+
+                    <img
+                        src="Stallions.jpg"
+                        alt="Ancient Stallions Logo"
+                    >
+
+                    <p>LOGO DESIGN</p>
+
+                    <h3>Ancient Stallions</h3>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+                <div
+                    class="gallery-card"
+                    data-category="social"
+                >
+
+                    <img
+                        src="images/poster.jpg"
+                        alt="Tournament Poster"
+                    >
+
+                    <p>SOCIAL MEDIA</p>
+
+                    <h3>Tournament Poster</h3>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+                <div
+                    class="gallery-card"
+                    data-category="social"
+                >
+
+                    <img
+                        src="images/team-standing.jpg"
+                        alt="Team Standing"
+                    >
+
+                    <p>GRAPHIC DESIGN</p>
+
+                    <h3>Team Standing</h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- IMAGE POPUP -->
+    <div id="imageModal" class="image-modal">
+
+        <span class="close-modal">
+            &times;
+        </span>
+
+        <button class="modal-prev">
+            &#10094;
+        </button>
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Design Preview"
+        >
+
+        <button class="modal-next">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <!-- IMAGE MODAL SCRIPT -->
+    <script>
+
+        const modal =
+            document.getElementById("imageModal");
+
+        const modalImage =
+            document.getElementById("modalImage");
+
+        const closeModal =
+            document.querySelector(".close-modal");
+
+        const prevBtn =
+            document.querySelector(".modal-prev");
+
+        const nextBtn =
+            document.querySelector(".modal-next");
+
+        const images =
+            document.querySelectorAll(".gallery-card img");
+
+        let currentIndex = 0;
+
+
+        // OPEN IMAGE
+        images.forEach((image, index) => {
+
+            image.addEventListener(
+                "click",
+                function () {
+
+                    currentIndex = index;
+
+                    modalImage.src = this.src;
+
+                    modal.classList.add("active");
+
+                }
+            );
 
         });
 
-    });
 
-    // NEXT IMAGE
-    nextBtn.addEventListener("click", function (event) {
+        // NEXT IMAGE
+        nextBtn.addEventListener(
+            "click",
+            function (event) {
 
-        event.stopPropagation();
+                event.stopPropagation();
 
-        currentIndex++;
+                currentIndex++;
 
-        if (currentIndex >= images.length) {
-            currentIndex = 0;
-        }
-
-        modalImage.src = images[currentIndex].src;
-
-    });
-
-    // PREVIOUS IMAGE
-    prevBtn.addEventListener("click", function (event) {
-
-        event.stopPropagation();
-
-        currentIndex--;
-
-        if (currentIndex < 0) {
-            currentIndex = images.length - 1;
-        }
-
-        modalImage.src = images[currentIndex].src;
-
-    });
-
-    // CLOSE X
-    closeModal.addEventListener("click", function () {
-        modal.classList.remove("active");
-    });
-
-    // CLOSE WHEN CLICKING BACKGROUND
-    modal.addEventListener("click", function (event) {
-
-        if (event.target === modal) {
-            modal.classList.remove("active");
-        }
-
-    });
-</script>
-
-<script>
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const galleryCards = document.querySelectorAll(".gallery-card");
-
-    filterButtons.forEach(button => {
-
-        button.addEventListener("click", function () {
-
-            // Active button
-            filterButtons.forEach(btn => {
-                btn.classList.remove("active");
-            });
-
-            this.classList.add("active");
-
-            const filter = this.getAttribute("data-filter");
-
-            // Filter projects
-            galleryCards.forEach(card => {
-
-                const category = card.getAttribute("data-category");
-
-                if (filter === "all" || category === filter) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
+                if (currentIndex >= images.length) {
+                    currentIndex = 0;
                 }
 
-            });
+                modalImage.src =
+                    images[currentIndex].src;
+
+            }
+        );
+
+
+        // PREVIOUS IMAGE
+        prevBtn.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                currentIndex--;
+
+                if (currentIndex < 0) {
+                    currentIndex =
+                        images.length - 1;
+                }
+
+                modalImage.src =
+                    images[currentIndex].src;
+
+            }
+        );
+
+
+        // CLOSE X
+        closeModal.addEventListener(
+            "click",
+            function () {
+
+                modal.classList.remove("active");
+
+            }
+        );
+
+
+        // CLOSE BACKGROUND
+        modal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === modal) {
+
+                    modal.classList.remove("active");
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+    <!-- FILTER SCRIPT -->
+    <script>
+
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
+
+        const galleryCards =
+            document.querySelectorAll(".gallery-card");
+
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove("active");
+                    });
+
+                    this.classList.add("active");
+
+
+                    const filter =
+                        this.getAttribute("data-filter");
+
+
+                    galleryCards.forEach(card => {
+
+                        const category =
+                            card.getAttribute(
+                                "data-category"
+                            );
+
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            card.style.display = "block";
+
+                        } else {
+
+                            card.style.display = "none";
+
+                        }
+
+                    });
+
+                }
+            );
 
         });
 
-    });
-</script>
-
-
+    </script>
 
 </body>
+
 </html>

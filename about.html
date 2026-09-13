@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About | ECZU Graphics</title>
+
+  <link rel="stylesheet" href="Style.css">
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- SIDEBAR / TOP NAV -->
+  <aside class="sidebar">
+
+    <div class="logo-area">
+      <img src="EczuGraphics.png" alt="ECZU Logo" class="main-logo">
+    </div>
+
+    <nav>
+      <a href="index.html">
+        <i class="fa-solid fa-house"></i>
+        Home
+      </a>
+
+      <a href="about.html" class="active">
+        <i class="fa-regular fa-user"></i>
+        About
+      </a>
+
+      <a href="services.html">
+        <i class="fa-solid fa-layer-group"></i>
+        Services
+      </a>
+
+      <a href="projects.html">
+        <i class="fa-regular fa-folder"></i>
+        Portfolio
+      </a>
+
+      <a href="skills.html">
+        <i class="fa-solid fa-code"></i>
+        Skills
+      </a>
+
+      <a href="contact.html">
+        <i class="fa-regular fa-envelope"></i>
+        Contact
+      </a>
+    </nav>
+
+    <div class="hire-card">
+      <p>Available for</p>
+
+      <h3>
+        Freelance<br>
+        Projects
+      </h3>
+
+      <span>
+        Need a graphic designer?
+        Let's create something clean.
+      </span>
+
+      <a href="contact.html" class="hire-btn">
+        Hire Me
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="socials">
+      <p>FOLLOW ME</p>
+
+      <div>
+        <a
+          href="https://www.facebook.com/share/1GeFxTS1bp/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/yezu.mitzu?igsi=MTQzZnFwMWlzMWsycQ=="
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@eczu_graphics?_r=1&_t=ZS-99KpbpIRoJA"
+          target="_blank"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- ABOUT ONLY -->
+    <section class="section" id="about">
+
+      <div class="section-heading">
+        <p>ABOUT ME</p>
+        <h2>Creative Designer</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+
+          <h3>
+            Designing ideas into
+            <span>visual experiences.</span>
+          </h3>
+
+          <p>
+            I focus on bold, clean and modern graphic
+            designs. My goal is to give every project
+            a strong identity while keeping the design
+            professional and visually appealing.
+          </p>
+
+          <a href="contact.html">
+            Work With Me
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+
+        <div class="about-info">
+
+          <div>
+            <span>NAME</span>
+            <strong>ECZU Graphics</strong>
+          </div>
+
+          <div>
+            <span>SPECIALTY</span>
+            <strong>Graphic Design</strong>
+          </div>
+
+          <div>
+            <span>STATUS</span>
+            <strong>Available</strong>
+          </div>
+
+          <div>
+            <span>LOCATION</span>
+            <strong>Philippines</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      <p>
+        © 2026 ECZU Graphics. All Rights Reserved.
+      </p>
+
+      <p>
+        Designed by ECZU Graphics
+      </p>
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+  <script>
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", function() {
+
+        navLinks.forEach(item => {
+          item.classList.remove("active");
+        });
+
+        this.classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
