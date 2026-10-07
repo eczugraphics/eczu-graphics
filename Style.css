@@ -2114,4 +2114,203 @@ body{
     }
 
 }
+/* =========================================
+   MOBILE - LEFT SIDEBAR / TASKBAR
+   ========================================= */
 
+@media (max-width: 800px) {
+
+    /* LEFT SIDEBAR */
+    .sidebar {
+        display: flex !important;
+
+        position: fixed !important;
+        top: 0;
+        left: 0;
+
+        width: 65px !important;
+        height: 100vh !important;
+
+        padding: 15px 0 !important;
+
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+
+        background: #111 !important;
+        border-right: 1px solid #333 !important;
+        border-bottom: none !important;
+
+        z-index: 1000;
+    }
+
+    /* LOGO */
+    .logo-area {
+        width: 65px !important;
+        height: 65px !important;
+
+        margin: 0 0 25px 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .logo-area .main-logo {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    /* NAVIGATION */
+    .sidebar nav {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        gap: 8px !important;
+        margin: 0 !important;
+    }
+
+    .sidebar nav a {
+        width: 50px !important;
+        height: 50px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        border-radius: 10px !important;
+
+        font-size: 0 !important;
+    }
+
+    /* ICONS */
+    .sidebar nav a i {
+        font-size: 17px !important;
+        margin: 0 !important;
+    }
+
+    /* ACTIVE / HOVER */
+    .sidebar nav a:hover,
+    .sidebar nav a.active {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    /* HIRE CARD */
+    .sidebar .hire-card {
+        display: none !important;
+    }
+
+    /* SOCIALS */
+    .sidebar .socials {
+        margin-top: auto !important;
+
+        padding: 0 !important;
+
+        border-left: none !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    .sidebar .socials p {
+        display: none !important;
+    }
+
+    .sidebar .socials div {
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 15px !important;
+    }
+
+    .sidebar .socials a {
+        font-size: 15px !important;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+        margin-left: 65px !important;
+
+        width: calc(100% - 65px) !important;
+
+        padding: 0 15px !important;
+    }
+
+    /* REMOVE TOP NAV IF USED */
+    .top-nav {
+        display: none !important;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 100vh !important;
+
+        grid-template-columns: 1fr !important;
+
+        padding: 50px 5px !important;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 55px) !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: -2px !important;
+    }
+
+    .hero h2 {
+        font-size: 20px !important;
+
+        line-height: 1.3 !important;
+
+        margin-top: 20px !important;
+    }
+
+    .hero-description {
+        font-size: 12px !important;
+
+        line-height: 1.6 !important;
+
+        max-width: 100% !important;
+    }
+
+    /* HERO IMAGE */
+    .hero-visual {
+        min-height: 350px !important;
+
+        margin-top: 20px !important;
+    }
+
+    .designer-image {
+        width: 220px !important;
+        height: 280px !important;
+
+        border-radius: 15px !important;
+    }
+
+    .circle-one {
+        width: 280px !important;
+        height: 280px !important;
+    }
+
+    .circle-two {
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
