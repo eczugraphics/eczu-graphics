@@ -757,25 +757,6 @@ border-radius: 10px;
     object-fit: cover;
     display: block;
 }
-  background:
-    linear-gradient(
-      135deg,
-      #1c1c1c,
-      #070707
-    );
-
-  border: 1px solid #242424;
-
-  border-radius: 10px;
-
-  margin-bottom: 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
 
 
 .project-image span {
@@ -2653,175 +2634,70 @@ body{
         gap: 18px;
     }
 }
-/* =========================================
-   FIXED LEFT SIDEBAR NAVIGATION
-========================================= */
 
-.sidebar {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    bottom: 0;
-
-    width: 240px;
-    height: 100vh;
-
-    display: flex !important;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-
-    padding: 25px 18px;
-
-    background: #0b0b0b;
-    border-right: 1px solid #252525;
-    border-bottom: none;
-
-    overflow-y: auto;
-    z-index: 1000;
-}
-
-.sidebar .logo-area {
-    width: 100%;
-    height: 75px;
-    flex-shrink: 0;
-    margin: 0 0 35px !important;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sidebar .main-logo {
-    width: 65px !important;
-    height: 65px !important;
-    object-fit: contain;
-}
-
-.sidebar nav {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch;
-    gap: 8px;
-    width: 100%;
-    margin: 0;
-}
-
-.sidebar nav a {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-
-    width: 100%;
-    padding: 13px 14px;
-    margin: 0;
-
-    color: #999;
-    text-decoration: none;
-    font-size: 13px;
-
-    border-radius: 8px;
-    white-space: nowrap;
-    transition: 0.25s;
-}
-
-.sidebar nav a:hover,
-.sidebar nav a.active {
-    background: #fff;
-    color: #000;
-}
-
-/* FREELANCE CARD */
-.sidebar .hire-card {
-    display: block;
-    width: 100%;
-    margin-top: auto;
-    padding: 18px 14px;
-
-    background: #111;
-    border: 1px solid #292929;
-    border-radius: 10px;
-}
-
-.sidebar .hire-card p,
-.sidebar .hire-card span {
-    display: block;
-}
-
-.sidebar .hire-card p {
-    font-size: 10px;
-    color: #888;
-}
-
-.sidebar .hire-card h3 {
-    font-size: 16px;
-    margin: 8px 0;
-}
-
-.sidebar .hire-card span {
-    font-size: 10px;
-    line-height: 1.6;
-    margin-bottom: 14px;
-}
-
-.sidebar .hire-card .hire-btn {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 11px;
-}
-
-/* SOCIAL LINKS */
-.sidebar .socials {
-    display: block !important;
-    margin-top: 25px !important;
-    padding: 15px 0 0 !important;
-    border-left: none !important;
-    border-top: 1px solid #292929;
-
-    font-size: 12px;
-}
-
-.sidebar .socials p {
-    font-size: 9px;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-}
-
-.sidebar .socials div {
-    display: flex;
-    gap: 20px;
-}
-
-/* MAIN CONTENT TO THE RIGHT */
-.main {
-    width: auto;
-    min-width: 0;
-    margin-left: 240px !important;
-    padding: 0 35px;
-}
-
-/* HIDE THE OLD TOP NAV IF PRESENT */
-.top-nav {
-    display: none;
-}
-
-/* =========================================
-   TABLET AND PHONE
-========================================= */
-
+/* ECZU MOBILE: fixed LEFT navigation, no hamburger or JavaScript required */
 @media (max-width: 800px) {
-    .sidebar {
-        display: none !important;
-    }
-
-    .main {
-        width: 100%;
-        margin-left: 0 !important;
-        padding: 0 16px;
-    }
-
-    .top-nav {
-        display: flex;
-    }
+  html, body { overflow-x: hidden !important; }
+  body { padding-top: 0 !important; }
+  .sidebar {
+    display: flex !important; position: fixed !important; top: 0 !important; left: 0 !important;
+    right: auto !important; bottom: 0 !important; width: 94px !important;
+    height: 100dvh !important; padding: 12px 5px !important;
+    flex-direction: column !important; align-items: center !important;
+    justify-content: flex-start !important; gap: 0 !important;
+    overflow-y: auto !important; overflow-x: hidden !important;
+    background: #101010 !important; border-right: 1px solid #303030 !important;
+    border-bottom: 0 !important; z-index: 9999 !important;
+  }
+  .sidebar .logo-area { display:flex !important; flex:0 0 auto !important;
+    width: 75px !important; height: 65px !important; margin: 0 0 15px !important; padding:0 !important; }
+  .sidebar .main-logo { width: 57px !important; height: 57px !important; object-fit:contain !important; }
+  .sidebar nav { display:flex !important; width:100% !important;
+    flex-direction:column !important; align-items:stretch !important;
+    gap: 6px !important; flex: 0 0 auto !important; margin:0 !important; }
+  .sidebar nav a { display:flex !important; width:100% !important; height:auto !important;
+    min-height:57px !important; padding: 8px 2px !important;
+    flex-direction:column !important; align-items:center !important; justify-content:center !important;
+    gap:6px !important; font-size:10px !important; line-height:1.2 !important;
+    white-space:normal !important; text-align:center !important; border-radius:9px !important;
+    color:#bbb !important; text-decoration:none !important; }
+  .sidebar nav a i { display:block !important; font-size:18px !important; margin:0 !important; }
+  .sidebar nav a.active, .sidebar nav a:hover { background:#fff !important; color:#000 !important; }
+  .sidebar .hire-card { display:none !important; }
+  .sidebar .socials { display:none !important; }
+  .mobile-menu-toggle { display:none !important; }
+  .main { margin:0 0 0 94px !important; width:calc(100% - 94px) !important;
+    max-width:calc(100% - 94px) !important; min-width:0 !important; padding:0 14px !important; }
+  .main > * { max-width:100% !important; min-width:0 !important; }
+  .top-nav { display:none !important; }
+  .hero { display:grid !important; grid-template-columns:minmax(0,1fr) !important;
+    min-height:0 !important; padding:45px 0 30px !important; gap:20px !important; }
+  .hero-content { min-width:0 !important; width:100% !important; }
+  .hero h1 { font-size:clamp(27px,7vw,43px) !important; line-height:1.1 !important;
+    letter-spacing:-1px !important; white-space:normal !important; overflow-wrap:anywhere !important; }
+  .hero h1 .brand-name { display:block !important; font-size:clamp(15px,4vw,22px) !important; margin-top:8px !important; }
+  .hero h2 { font-size:clamp(17px,4.8vw,23px) !important; }
+  .hero-description { font-size:12px !important; }
+  .hero-visual { min-height:260px !important; width:100% !important; overflow:hidden !important; }
+  .designer-image { max-width:90% !important; }
+  .circle-one { width:240px !important; height:240px !important; }
+  .circle-two { width:290px !important; height:290px !important; }
+  .section { padding:45px 0 !important; }
+  .about-grid, .service-grid, .portfolio-grid, .all-projects-grid,
+  .tools-grid, .contact-section, .form-row { grid-template-columns:minmax(0,1fr) !important; }
+  .about-card { padding:18px !important; }
+  .about-info { grid-template-columns:minmax(0,1fr) !important; }
+  .section-heading h2, .projects-header h1, .skills-header h1 { font-size:clamp(22px,6vw,32px) !important; }
+  .portfolio-heading { flex-wrap:wrap !important; gap:15px !important; }
+  .filter-buttons { display:flex !important; flex-wrap:wrap !important; gap:8px !important; }
+  .contact-section { display:grid !important; gap:25px !important; padding:35px 0 !important; }
+  .contact-text h2 { font-size:clamp(24px,7vw,36px) !important; }
+  .contact-form, .contact-form input, .contact-form textarea { max-width:100% !important; min-width:0 !important; }
+  img { max-width:100% !important; }
+  footer { max-width:100% !important; }
+}
+@media (max-width: 380px) {
+ .sidebar { width:80px !important; }
+ .main { margin-left:80px !important; width:calc(100% - 80px) !important; max-width:calc(100% - 80px) !important; padding:0 10px !important; }
+ .sidebar nav a { font-size:9px !important; }
 }
