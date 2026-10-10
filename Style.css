@@ -2722,3 +2722,27 @@ body{
     margin-top: 8px !important;
   }
 }
+
+@media (max-width: 800px) {
+  .sidebar .socials {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .sidebar .socials div {
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .sidebar .socials a {
+    display: inline-flex !important;
+    color: white;
+    font-size: 16px;
+  }
+}
