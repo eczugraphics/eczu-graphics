@@ -2701,3 +2701,24 @@ body{
  .main { margin-left:80px !important; width:calc(100% - 80px) !important; max-width:calc(100% - 80px) !important; padding:0 10px !important; }
  .sidebar nav a { font-size:9px !important; }
 }
+
+/* Home mobile heading: name on one line, brand underneath */
+@media (max-width: 800px) {
+  .hero h1 .person-name {
+    display: block !important;
+    font-size: clamp(15px, 4.1vw, 26px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.5px !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    color: #fff !important;
+  }
+  .hero h1 .brand-name {
+    display: block !important;
+    font-size: clamp(12px, 3.4vw, 18px) !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+    margin-top: 8px !important;
+  }
+}
