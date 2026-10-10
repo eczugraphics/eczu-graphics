@@ -2664,7 +2664,7 @@ body{
   .sidebar nav a i { display:block !important; font-size:18px !important; margin:0 !important; }
   .sidebar nav a.active, .sidebar nav a:hover { background:#fff !important; color:#000 !important; }
   .sidebar .hire-card { display:none !important; }
-  .sidebar .socials { display:none !important; }
+  .sidebar .socials { display:flex !important; }
   .mobile-menu-toggle { display:none !important; }
   .main { margin:0 0 0 94px !important; width:calc(100% - 94px) !important;
     max-width:calc(100% - 94px) !important; min-width:0 !important; padding:0 14px !important; }
@@ -2744,5 +2744,59 @@ body{
     display: inline-flex !important;
     color: white;
     font-size: 16px;
+  }
+}
+
+/* FINAL FIX: Show Follow Me + social icons on the mobile left sidebar */
+@media (max-width: 800px) {
+  .sidebar {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sidebar .socials {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 100px !important;
+    margin: auto 0 0 !important;
+    padding: 18px 2px 12px !important;
+    border-left: 0 !important;
+    gap: 10px !important;
+  }
+  .sidebar .socials p {
+    display: block !important;
+    visibility: visible !important;
+    font-size: 8px !important;
+    line-height: 1.3 !important;
+    letter-spacing: 1px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+  .sidebar .socials .social-icons,
+  .sidebar .socials div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 13px !important;
+    width: 100% !important;
+  }
+  .sidebar .socials a,
+  .sidebar .socials a i {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #fff !important;
+    font-size: 17px !important;
+    text-decoration: none !important;
   }
 }
