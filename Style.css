@@ -2800,3 +2800,132 @@ body{
     text-decoration: none !important;
   }
 }
+
+
+/* ECZU: desktop page gutters and balanced footer (About / Services / Skills / Contact) */
+@media (min-width: 801px) {
+  .main:has(> .section),
+  .main:has(> .skills-section),
+  .main:has(> .contact-section) {
+    padding-left: clamp(24px, 4vw, 64px) !important;
+    padding-right: clamp(24px, 4vw, 64px) !important;
+    box-sizing: border-box !important;
+  }
+  .main > .section,
+  .main > .skills-section,
+  .main > .contact-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .main > .skills-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .main > .contact-section {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .main > footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+    margin: 30px 0 0 !important;
+    padding: 24px 0 !important;
+    box-sizing: border-box !important;
+  }
+  .main > footer p:last-child { text-align: right !important; }
+}
+@media (max-width: 800px) {
+  .main > footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding: 20px 0 !important;
+  }
+}
+
+/* SAME FOOTER POSITION ON ALL PAGES */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main.main > footer {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+    main.main > footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* ===== ECZU FINAL: FOOTER ONLY ON SKILLS PAGE ===== */
+/* Hide the copyright/designer footer on every page except Skills. */
+body:not(:has(.skills-section)) main.main > footer {
+  display: none !important;
+}
+
+/* Remove the long horizontal divider beneath the About/Services content. */
+main.main > section.section {
+  border-bottom: none !important;
+}
+
+/* Keep Skills footer visible and positioned at the bottom of short pages. */
+body:has(.skills-section) main.main {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: calc(100vh - 80px) !important;
+}
+body:has(.skills-section) main.main > .skills-section {
+  min-height: 0 !important;
+  flex: 0 0 auto !important;
+}
+body:has(.skills-section) main.main > footer {
+  display: flex !important;
+  width: 100% !important;
+  margin-top: auto !important;
+  padding: 24px 0 !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+body:has(.skills-section) main.main > footer p:last-child {
+  text-align: right !important;
+}
+@media (max-width: 800px) {
+  body:has(.skills-section) main.main {
+    min-height: 100dvh !important;
+  }
+  body:has(.skills-section) main.main > footer {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  body:has(.skills-section) main.main > footer p:last-child {
+    text-align: left !important;
+  }
+}
